@@ -1,0 +1,20 @@
+---
+layout: default
+---
+<div class="container">
+  <div class="row">
+
+   <div class="eight columns">
+       <h4 class="post">
+          <strong>
+            {{ page.title }}
+          </strong>
+        </h4>
+        <article class="maincontent">
+          {{ content }}
+        </article>
+    </div>
+    <div class="four columns notopmargin">
+      {% include sidebar.html %}
+    </div>
+  </div>

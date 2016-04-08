@@ -1,0 +1,34 @@
+---
+layout: default-news
+---
+<div class="container">
+  <div class="row">
+
+   <div class="eight columns">
+     <div class="shifted-left">
+       <iframe data-aa='147076' src='https://ad.a-ads.com/147076?size=728x90' scrolling='no' style='width:728px; height:90px; border:0px; padding:0;overflow:hidden' allowtransparency='true' frameborder='0'></iframe>
+     </div>
+       <span id="note">
+         <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%d %b %Y" }}</time>
+       </span>
+       <h4 class="post">
+          <strong>
+            {{ page.title }}
+          </strong>
+        </h4>
+        {% if page.update %}
+        <small>
+          <time datetime="{{ page.update | date_to_xmlschema }}">
+            Last Update: {{ page.update | date: "%d %b %Y" }}
+          </time>
+        </small>
+        {% endif %}
+        <article class="maincontent">
+
+          {{ content }}
+        </article>
+    </div>
+    <div class="four columns" style="margin-top:0">
+      {% include sidebar.html %}
+    </div>
+  </div>

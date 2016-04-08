@@ -1,0 +1,23 @@
+<div class="container">
+  <div class="row">
+    <div class="twelve columns stripe">
+      <div class="hl"><a href="/">{{ site.title }}</a></div>
+      <small><em>{{ site.subtitle }}</em></small>
+    </div>
+  </div>
+  <nav class="main">
+    <div class="twelve columns">
+      <ul class="navi">
+
+        {% for page in site.pages %}
+        {% unless page.navi.exclude == true %}
+        <li><a href="{{ site.url }}{{ page.url }}">{{ page.title }}</a></li>
+        {% endunless %}
+        {% endfor %}
+
+      </ul>
+  
+
+    </div>
+  </nav>
+</div>

@@ -1,0 +1,47 @@
+---
+layout: default
+navi:
+ exclude: yes
+---
+<div class="container">
+  <div class="row">
+   <div class="eight columns">
+
+
+     <span id="note">Popular Posts</span>
+     <br><br>
+     {% for post in site.posts %}
+        {% if post.tags contains 'popular' %}
+       <p>
+         <strong>
+           <a href=".{{ post.url }}">{{ post.title }}</a> -
+         </strong>
+         {{ post.description }}
+       </p>
+       {% endif %}
+     {% endfor %}
+     <hr style="border-top: 2px solid #7A838D;">
+      <br>
+      <span id="note">New Posts</span>
+      {% for post in site.posts offset: 0 limit: 15 %}
+        <h4 class="post">
+          <strong>
+            <a href=".{{ post.url }}">{{ post.title }}</a>
+          </strong>
+          <small>{{ post.date | date_to_string }}</small>
+        </h4>
+        <p>
+          {{ post.description }}
+        </p>
+      {% endfor %}
+
+
+    </div>
+
+
+    <div class="four columns" style="margin-top:0">
+      {% include sidebar.html %}
+    </div>
+
+
+  </div>
