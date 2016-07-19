@@ -3,18 +3,19 @@ layout: default
 ---
 <div class="container">
   <div class="row">
-
-   <div class="eight columns">
-       <h4 class="post">
-          <strong>
-            {{ page.title }}
-          </strong>
-        </h4>
-        <article class="maincontent">
-          {{ content }}
-        </article>
+    <div class="one column">
     </div>
-    <div class="four columns notopmargin">
-      {% include sidebar.html %}
+   <div class="ten columns">
+      <div class="shoutout-void">
+        &nbsp;
+      </div>
+      <article class="maincontent">
+          {{ content }}
+      </article>
+      <div class="shoutout-void">
+        &nbsp;
+      </div>
+    </div>
+    <div class="one column">
     </div>
   </div>

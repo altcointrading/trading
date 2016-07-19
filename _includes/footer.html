@@ -1,8 +1,21 @@
-<div class="six columns">
-  &#169; 2016 | AltcoinTrading.net |
-<a title="Privacy Policy Altcointrading.net" href="/about/">Our privacy policy</a> |
-  <a title="Trading disclaimer" href="/disclaimer/">Disclaimer</a>
+<nav>
+
+{% for page in site.pages %}
+{% if page.menu == 'show' %}
+
+<div class="footeritem">
+  <a href="{{ site.url }}{{page.url}}">{{page.title}}&nbsp;<img src="/img/arrow.png" alt="{{page.title}}" /></a>&nbsp;&nbsp;
 </div>
-<div class="six columns">
-  {{ site.ads.pm1 }}
+
+{% endif %}
+{% endfor %}
+
+</nav>
+<br>
+<br>
+
+<footer>
+<div>
+  &copy 2010 Knecht Holding AG | Alle rechte vorbehalten.
 </div>
+</footer>

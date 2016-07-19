@@ -1,15 +1,11 @@
 # Site settings
-title: "Altcoin Trading"
-subtitle: "The forex of cryptocurrencies."
+title: "Startseite Knecht | Knecht AG"
+subtitle: "Startseite knecht.ch"
 description: ""
 baseurl: ""
-url: "https://www.altcointrading.net"
-#url: "http://127.0.0.1:4000"
-author: "AltcoinTrading"
+#url: "http://www.knecht.ch"
+#url: "http://139.59.215.129"
+url: "http://127.0.0.1:4000"
+author: "Knecht AG"
 markdown: kramdown
 ## Default image size: 700x360
-ads:
-  ledger: '<div class="text-center"><a rel="nofollow" target="_blank" href="https://www.ledgerwallet.com/r/e274"><img alt="Ledger Wallet protects your bitcoins" src="https://www.ledgerwallet.com/images/promo/ledger-468x90-01.jpg"></a></div>'
-  trezor: '<div class="shifted-left"><a rel="nofollow" target="_blank" href="https://buytrezor.com?a=fany@tutanota.com"><img src="/img/wallets/trezor.jpg" alt="Trezor Wallet for bitcoins and altcoins" title="Trezor Wallet for bitcoins and altcoins"></a></div>'
-  pm1: '<div class="text-center"><a rel="nofollow" target="_blank" href="https://perfectmoney.is/?ref=7622697"><img alt="Perfect Money" src="/img/ads/pm1.jpg"></a></div>'
-  pm2: '<div class="shifted-left"><a rel="nofollow" target="_blank" href="https://perfectmoney.is/?ref=7622697"><img alt="Perfect Money" src="/img/ads/pm2.jpg"></a></div>'

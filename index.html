@@ -5,43 +5,61 @@ navi:
 ---
 <div class="container">
   <div class="row">
-   <div class="eight columns">
+    <div class="one column">
+    </div>
+   <div class="ten columns">
 
-
-     <span id="note">Popular Posts</span>
-     <br><br>
-     {% for post in site.posts %}
-        {% if post.tags contains 'popular' %}
-       <p>
-         <strong>
-           <a href=".{{ post.url }}">{{ post.title }}</a> -
-         </strong>
-         {{ post.description }}
-       </p>
-       {% endif %}
-     {% endfor %}
-     <hr style="border-top: 2px solid #7A838D;">
-      <br>
-      <span id="note">New Posts</span>
-      {% for post in site.posts offset: 0 limit: 15 %}
-        <h4 class="post">
-          <strong>
-            <a href=".{{ post.url }}">{{ post.title }}</a>
-          </strong>
-          <small>{{ post.date | date_to_string }}</small>
-        </h4>
-        <p>
-          {{ post.description }}
-        </p>
-      {% endfor %}
-
+      <article class="shoutout">
+        Die Knecht Gruppe heisst Sie herzlich Willkommen
+      </article>
+      <article class="maincontent">
+        <div class="homebox six columns">
+          <div class="row">
+            <div class="four columns">
+              <img class="post" src="/img/logo-knecht.png" alt="" />
+            </div>
+            <div class="eight columns">
+              <a href="/gebr/nutzfahrzeuge/reparaturzentrum/">Nutzfahrzeugzentrum</a> <br>
+              <a href="/gebr/carrosserie-spritzwerk/carrosserie/">Carosserie</a>,
+              <a href="/gebr/carrosserie-spritzwerk/spritzwerk/">Spritzwerk</a>,
+              <a href="/gebr/beschriftungen-und-werbetechnik/">Beschriftungen</a> <br>
+              <a href="/gebr/tankstelle/">Tankstelle</a>
+            </div>
+          </div><!-- /row -->
+          <div class="row">
+            <div class="four columns">
+              <img class="post" src="/img/logo-knechtreisen.png" alt="" />
+            </div>
+            <div class="eight columns">
+              <a href="#">Fernreisen von führenden Spezielisten</a>
+            </div>
+          </div><!-- /row -->
+          <div class="row">
+            <div class="four columns">
+              <img class="post" src="/img/logo-eurobus.png" alt="" />
+            </div>
+            <div class="eight columns">
+              <a href="#">Reisen mit Genuss</a>
+            </div>
+          </div><!-- /row -->
+          <div class="row">
+            <div class="four columns">
+              <img class="post" src="/img/logo-welti.png" alt="" />
+            </div>
+            <div class="eight columns">
+              <a href="#">Privat- und Geschäftsumzüge</a> <br>
+              <a href="#">Kunsttransporte und Lagerung</a> <br>
+              <a href="#">Pneukran und Spezialtransporte</a> <br>
+            </div>
+          </div><!-- /row -->
+        </div>
+        <div class="homebox six columns" id="wechselbox">
+          <img class="full" src="/img/knecht-home.png" alt="{{site.title}}" />
+        </div>
+      </article>
 
     </div>
-
-
-    <div class="four columns" style="margin-top:0">
-      {% include sidebar.html %}
+    <div class="one column">
     </div>
-
-
   </div>
+  <script src="{{ site.url }}{{ site.baseurl }}/assets/js/homepage.js"></script>
