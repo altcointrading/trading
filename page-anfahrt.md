@@ -10,7 +10,7 @@ menu: show
 ###### Anreise (via Google Maps)
 
 
-Gebr. Knecht AG <br>
+Knecht Holding AG <br>
 Schwimmbadstrasse 1 <br>
 CH-5210 Windisch<br>
 

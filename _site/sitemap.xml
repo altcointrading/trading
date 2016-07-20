@@ -1,36 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-        <loc>http://127.0.0.1:4000</loc>
+        <loc>http://139.59.215.129</loc>
     </url>
 
     
     <url>
-        <loc>http://127.0.0.1:4000/assets/css/all.css</loc>
+        <loc>http://139.59.215.129/assets/css/all.css</loc>
     </url>
     
     <url>
-        <loc>http://127.0.0.1:4000/feed.xml</loc>
+        <loc>http://139.59.215.129/feed.xml</loc>
     </url>
     
     <url>
-        <loc>http://127.0.0.1:4000/</loc>
+        <loc>http://139.59.215.129/</loc>
     </url>
     
     <url>
-        <loc>http://127.0.0.1:4000/anfahrt/</loc>
+        <loc>http://139.59.215.129/anfahrt/</loc>
     </url>
     
     <url>
-        <loc>http://127.0.0.1:4000/geschichte/</loc>
+        <loc>http://139.59.215.129/geschichte/</loc>
     </url>
     
     <url>
-        <loc>http://127.0.0.1:4000/kontakt/</loc>
+        <loc>http://139.59.215.129/kontakt/</loc>
     </url>
     
     <url>
-        <loc>http://127.0.0.1:4000/sitemap.xml</loc>
+        <loc>http://139.59.215.129/sitemap.xml</loc>
     </url>
     
 
