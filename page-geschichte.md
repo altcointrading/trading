@@ -6,6 +6,8 @@ menu: show
 ---
 
 
+<div class="row" markdown="1">
+
 <div class="eight columns" markdown="1">
 
 ###### Unsere Geschichte: "Seit 100 Jahren bewegen wir Menschen"
@@ -21,6 +23,26 @@ menu: show
 | 1933 	| Anschluss an die ASTO, Automob. Stückgut Organisation (SBB Cargo Domizil) 	|
 | 1939 	| Umrüstung von 3 Lastwagen und 1 Car auf Holzgas-Betrieb 	|
 | 1948 	| Übernahme des Betriebs durch die Brüder Hans (geb. 1909), Walter (geb. 1919) und Paul (geb.1927) 	|
+
+
+
+</div>
+<div class="four columns geschichte" markdown="1">
+
+![](/img/geschichte/1915.jpg)
+
+1915 – Transport eines Kessels (600 Centner) für die Windischer Spinnereien mit 12 Pferden. Zuvorderst Fuhrhalter Johann Knecht.
+
+![](/img/geschichte/1917.jpg)
+
+1917 – während des Krieges im Urlaub, Johann Knecht beim Holztransport an der Baslerstrasse Brugg.
+
+</div>
+
+</div><div class="row" markdown="1">
+
+<div class="eight columns" markdown="1">
+
 
 ###### 1952-1990
 
@@ -53,6 +75,27 @@ menu: show
 | 1990 	| Eröffnung Reisebüro Baden 	|
 
 
+
+
+</div>
+<div class="four columns geschichte" markdown="1">
+
+
+![](/img/geschichte/1958.jpg)
+
+1958 – Mont S. Michel am Atlantik, Setra S 6
+
+![](/img/geschichte/Bild8.jpg)
+
+1963 – Jugoslawische Grenze, Wurzenpass
+
+
+</div>
+
+</div><div class="row" markdown="1">
+
+<div class="eight columns" markdown="1">
+
 ###### 1992-heute
 
 
@@ -82,16 +125,14 @@ menu: show
 </div>
 <div class="four columns geschichte" markdown="1">
 
-![](/img/geschichte/1915.jpg)
-
-![](/img/geschichte/1917.jpg)
-
-![](/img/geschichte/1958.jpg)
-
-![](/img/geschichte/Bild8.jpg)
-
 ![](/img/geschichte/pneukran.jpg)
+
+2000 – Pneukran im Einsatz
 
 ![](/img/geschichte/reisezentrum.jpg)
 
+2014 – Das neue Reisezentrum in Windisch
+
+
+</div>
 </div>
