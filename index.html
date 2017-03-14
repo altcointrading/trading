@@ -5,61 +5,77 @@ navi:
 ---
 <div class="container">
   <div class="row">
-    <div class="one column">
-    </div>
-   <div class="ten columns">
+   <div class="eight columns swapper">
 
-      <article class="shoutout">
-        Die Knecht Gruppe heisst Sie herzlich Willkommen
-      </article>
-      <article class="maincontent">
-        <div class="homebox six columns">
-          <div class="row">
-            <div class="four columns" id="knecht">
-              <img class="post" src="/img/logo/logo_knecht_inactive.png" alt="" />
-            </div>
-            <div class="eight columns">
-              <a href="/gebr/nutzfahrzeuge/reparaturzentrum/">Nutzfahrzeugzentrum</a> <br>
-              <a href="/gebr/carrosserie-spritzwerk/carrosserie/">Carosserie</a>,
-              <a href="/gebr/carrosserie-spritzwerk/spritzwerk/">Spritzwerk</a>,
-              <a href="/gebr/beschriftungen-und-werbetechnik/">Beschriftungen</a> <br>
-              <a href="/gebr/tankstelle/">Tankstelle</a>
-            </div>
-          </div><!-- /row -->
-          <div class="row">
-            <div class="four columns" id="knechtreisen">
-              <img class="post" src="/img/logo/logo_knechtreisen_inactive.png" alt="" />
-            </div>
-            <div class="eight columns">
-              <a href="#">Fernreisen von führenden Spezielisten</a>
-            </div>
-          </div><!-- /row -->
-          <div class="row">
-            <div class="four columns" id="eurobus">
-              <img class="post" src="/img/logo/logo_eurobus_inactive.png" alt="" />
-            </div>
-            <div class="eight columns">
-              <a href="http://www.knechtreisen.ch/">Reisen mit Genuss</a>
-            </div>
-          </div><!-- /row -->
-          <div class="row">
-            <div class="four columns" id="weltifurrer">
-              <img class="post" src="/img/logo/logo_weltifurrer_inactive.png" alt="" />
-            </div>
-            <div class="eight columns">
-              <a href="http://www.weltifurrer.ch/de/umzuegech/index.php">Privat- und Geschäftsumzüge</a> <br>
-              <a href="http://www.weltifurrer.ch/de/finearts/index.php">Kunsttransporte und Lagerung</a> <br>
-              <a href="http://www.pneukran.com/">Pneukran und Spezialtransporte</a> <br>
-            </div>
-          </div><!-- /row -->
+    <section id="popular-posts">
+      <span id="note">Popular Posts</span>
+      <br><br>
+      {% for post in site.posts %}
+         {% if post.tags contains 'popular' %}
+        <p>
+          <strong>
+            <a href=".{{ post.url }}">{{ post.title }}</a>
+          </strong>
+        <br>
+          {% if post.update %}<em> Updated {{ post.update | date: "%d %b %Y" }}: </em>{% endif %}{{ post.description }}
+        </p>
+        {% endif %}
+      {% endfor %}
+      <hr class="home">
+    </section>
+
+
+
+    <section id="new-posts">
+      {{ site.ads.aads728 }}
+      <br>
+      <span id="note">New Posts</span>
+      {% for post in site.posts offset: 0 limit: 15 %}
+        <h4 class="post">
+          <strong>
+            <a href=".{{ post.url }}">{{ post.title }}</a>
+          </strong>
+          <small>{{ post.date | date_to_string }}</small>
+        </h4>
+        <div class="row">
+          <div class="nine columns">
+            {{ post.description }}
+            {% if post.comments %}
+            <p>
+              [<a href="{{ site.url }}{{ site.baseurl}}{{ post.url }}#disqus_embed">
+              Comments
+              </a>]
+            </p>
+            {% endif %}
+          </div>
+          {% if post.image[0] %}
+          <div class="three columns">
+            <a target="_blank" href="{{ post.url }}">
+              <figure class="thumb">
+                <amp-img itemprop="image" src="{{ post.image[0] }}" alt="Altcoin Trading Blog"
+                layout="fixed"
+                width="150px" height="80px">
+                </amp-img>
+              </figure>
+            </a>
+          </div>
+          {% endif %}
         </div>
-        <div class="homebox six columns" id="wechselbox">
-          <img class="full" src="/img/knecht-home.png" alt="{{site.title}}" />
-        </div>
-      </article>
+      {% endfor %}
+      {{ site.ads.aads728 }}
+    </section>
+
+
+
+
+
 
     </div>
-    <div class="one column">
+
+
+    <div class="four columns notopmargin">
+      {% include sidebar.html %}
     </div>
+
+
   </div>
-  <script src="{{ site.url }}{{ site.baseurl }}/assets/js/homepage.js"></script>

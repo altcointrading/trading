@@ -3,7 +3,7 @@ module Jekyll
 
     def initialize(tag_name, markup, tokens)
       super
-      @class = 'th'
+      @class = 'thumb'
       @src = ''
       @alt = 'Altcoin Trading'
       @caption = nil #not required
@@ -192,27 +192,3 @@ module Jekyll
 end
 
 Liquid::Template.register_tag('amptall', Jekyll::AmpTallTag)
-
-
-
-
-
-
-=begin
-<figure class="inline-image lead-image">
-<div class="image-credit-wrapper">
-<span class="image-credit">Liverpool Echo</span>
-<amp-img src="http://i1.mirror.co.uk/" itemprop="image" data-original-width="1200"
-data-original-height="800" layout="responsive" height="800" width="1200"></amp-img>
-</div>
-<figcaption>
-</figure>
-=end
-
-=begin
-      if @caption
-        amp += "</figure></amp-img>"
-      else
-        amp += "<figcaption>#{@caption}</figcaption></amp-img>"
-      end
-=end

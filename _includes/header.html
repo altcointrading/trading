@@ -1,15 +1,64 @@
 <div class="container">
   <div class="row">
+    <div class="twelve columns stripe">
+      <div class="logo">
+        <amp-img itemprop="image" alt="{{ site.title }}"
+        src="{{ site.url }}{{ site.baseurl}}/img/logo.jpg"
+        layout="responsive"
+        data-original-width="75px" data-original-height="90px"
+        width="75px" height="90px"></amp-img>
+      </div>
+      <div class="textlogo">
+        <div class="hl"><a href="/">{{ site.title }}</a></div>
+        <small><em>{{ site.subtitle }}</em></small>
+      </div>
+    </div>
+    <div class="tooltip" id="togglemenu">
+      <input type="checkbox" value="selected" id="mobile-menu-1" class="tooltip-input">
+      <label for="mobile-menu-1" class="tooltip-label-menu">
+        <i class="fa fa-bars fa-2" aria-hidden="true"></i>&nbsp;MENU
+      </label>
+      <div role="tooltip" id="togglemenuID" class="tooltip-content">
 
-    <div class="one column">
-    </div>
-    <div class="ten columns">
-      <a title="{{ site.title }}" href="/">
-        <img class="hero" src="/img/knecht-header.png" alt="{{ site.title }}" />
-      </a>
-    </div>
-    <div class="one column">
-    </div>
+        <nav class="main">
+          <div class="twelve columns">
+            <ul class="navi">
 
+              {% for page in site.pages %}
+              {% unless page.navi.exclude == true %}
+              <li><a href="{{ site.url }}{{ page.url }}">{{ page.title }}</a></li>
+              {% endunless %}
+              {% endfor %}
+
+              <li><a class="coin" href="/coin/dash/">DASH</a></li>
+              <li><a class="coin" href="/coin/eth/">ETH</a></li>
+              <li><a class="coin" href="/coin/xmr/">XMR</a></li>
+            </ul>
+
+
+          </div>
+        </nav>
+
+     </div> <!--/.tooltip-content-->
+    </div><!--/.tooltip-->
   </div>
+  <nav class="main" id="desktopmenu">
+    <div class="twelve columns">
+      <ul class="navi">
+
+        {% for page in site.pages %}
+        {% unless page.navi.exclude == true %}
+        <li><a href="{{ site.url }}{{ page.url }}">{{ page.title }}</a></li>
+        {% endunless %}
+        {% endfor %}
+
+        <li><a class="coin" href="/coin/dash/">DASH</a></li>
+        <li><a class="coin" href="/coin/eth/">ETH</a></li>
+        <li><a class="coin" href="/coin/xmr/">XMR</a></li>
+      </ul>
+
+
+    </div>
+  </nav>
+
 </div>

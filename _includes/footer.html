@@ -1,21 +1,44 @@
-<nav>
+<div class="six columns">
+<a title="Privacy Policy Altcointrading.net" href="/about/">Privacy</a> |
+  <a title="Trading disclaimer" href="/disclaimer/">Disclaimer</a> |
+  <a href='http://feeds.specificfeeds.com/altcointrading?subParam=followPub' target='_blank'>
+    Newsletter
+  </a> ||
+  <a href="/coupon-bitmex-iYQB44/">Coupon BitMEX</a> |
+  <a href="/coupon-coinmama-fny3000/">Coupon CoinMama</a> |
+  <a href="/coupon-bitfinex-5egV78YtlC/">Coupon BitFinex</a>
 
-{% for page in site.pages %}
-{% if page.menu == 'show' %}
+  <br>
 
-<div class="footeritem">
-  <a href="{{ site.url }}{{page.url}}">{{page.title}}&nbsp;<img src="/img/arrow.png" alt="{{page.title}}" /></a>&nbsp;&nbsp;
+  &#169; 2016-2017 | info@altcointrading.net
+
+</div>
+<div class="six columns">
+  {{ site.ads.trezor }}
 </div>
 
-{% endif %}
-{% endfor %}
-
-</nav>
-<br>
-<br>
-
-<footer>
-<div>
-  &copy 2010 Knecht Holding AG | Alle rechte vorbehalten.
-</div>
-</footer>
+<amp-analytics type="googleanalytics">
+<script type="application/json">
+{
+  "vars": {
+    "account": "UA-73503011-2"
+  },
+  "triggers": {
+    "trackPageview": {
+      "on": "visible",
+      "request": "pageview"
+    },
+    "outboundLinks": {
+        "on": "click",
+        "selector": "a",
+        "request": "event",
+        "vars": {
+          "eventCategory": "outbound",
+          "eventAction": "click",
+          "eventValue": "${outboundLink}"
+        }
+      }
+  }
+}
+</script>
+</amp-analytics>
