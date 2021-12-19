@@ -13,7 +13,5 @@ git add .
 git commit -m "GIT+DEPLOY - $1"
 git push origin dev
 
-exit
-# !!!! configure this
 echo " === [*] publish"
 rsync -zavP ./website/_site/* dev:/var/www/demo-trading/
