@@ -1,0 +1,1 @@
+BUNDLE_GEMFILE='./website/Gemfile' bundle exec jekyll serve --source ./website --destination ./website/_site

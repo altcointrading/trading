@@ -1,55 +1,24 @@
-# trading
+# "Trading": Free Jekyll Theme
 
-jekyll theme in newspaper style
+Trading is a jekyll theme in newspaper style
 
-this theme passes the test for current AMP version (accelerated mobile pages)
+This theme is AMP-ready (including Google Analytics and Disqus comments) and includes a basic version of JSON-LD markup for WebPage and Organisation.
 
-## auto-deployment
+## DEMO
 
-if you want to set up an autodeployment through git ...
+https://trading.tdou.dev
 
-1/ On the VPS: 
+This theme was developed in 2016 and is not maintained or updated in the free version.
 
-* install ruby, jekyll, git-core. 
-* create a bare repo
+This theme is open-source. It is an old template from [altcointrading.net](https://www.altcointrading.net) that is no longer in use. You may use this template for any kind of projects, including commercial ones.
 
-```
-cd
-mkdir repos && cd repos
-mkdir trading-bare.git
-cd trading-bare.git
-git init --bare
-```
+[LICENSE (MIT)](LICENSE)
 
-* create the hook
+## Getting started
+
+Configure your site in _config.yml.
 
 ```
-cd hooks
-vim post-receive
+bundle install
+./serve
 ```
-
-* ...with content
-
-```
-#!/bin/bash -l
-GIT_REPO=$HOME/repos/trading-bare.git
-TMP_GIT_CLONE=$HOME/tmp/git/trading
-PUBLIC_WWW=/var/www/trading/html
-
-git clone $GIT_REPO $TMP_GIT_CLONE
-jekyll build --source $TMP_GIT_CLONE --destination $PUBLIC_WWW
-rm -Rf $TMP_GIT_CLONE
-exit
-```
-
-(change paths accordingly, make it executable)
-
-2/ Your local repo with your website:
-
-* add a new remote for autodeployment
-
-`git remote add vps your-server-username@XX.XXX.XXX.XXX:repos/trading-bare.git`
-
-To deploy you do `git push vps master`.
-
-

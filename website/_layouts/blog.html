@@ -1,0 +1,52 @@
+---
+layout: default-news
+---
+<div class="container">
+  <div class="row">
+
+   <div class="eight columns">
+     <div class="shifted-left">
+       <!-- ad here -->
+     </div>
+       <span id="note">
+         <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%d %b %Y" }}</time>
+       </span>
+       <h4 class="post">
+          <strong>
+            {{ page.title }}
+          </strong>
+        </h4>
+        {% if page.update %}
+        <small>
+          <time datetime="{{ page.update | date_to_xmlschema }}">
+            Last Update: {{ page.update | date: "%d %b %Y" }}
+          </time>
+        </small>
+        {% endif %}
+        <article class="maincontent">
+
+          <div class="row intext">
+            {{ content }}
+          </div>
+
+          {% if site.disqusembed %}
+            {% if page.comments %}
+            <div class="row comments">
+              <h4 class="post comment" id="disqus_embed">Comment on "{{ page.title }}"</h4>
+              <amp-iframe width=600 height=700
+                layout="responsive"
+                sandbox="allow-scripts allow-same-origin allow-modals allow-popups allow-forms"
+                resizable
+                src="{{site.disqusembed}}#{{ page.permalink }}">
+                <div overflow tabindex=0 role=button aria-label="Read more">Read more!</div>
+              </amp-iframe>
+            </div>
+            {% endif %}
+          {% endif %}
+
+        </article>
+    </div>
+    <div class="four columns nomargintop">
+      {% include sidebar.html %}
+    </div>
+  </div>

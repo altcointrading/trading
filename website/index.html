@@ -1,0 +1,89 @@
+---
+layout: default
+navi:
+ exclude: yes
+---
+<div class="container">
+  <div class="row">
+   <div class="eight columns swapper">
+    <section id="popular-posts">
+      <span id="note">Popular Posts</span>
+      <br><br>
+      {% for post in site.posts %}
+         {% if post.tags contains 'popular' %}
+        <p>
+          <strong>
+            <a href="{{ post.url }}">{{ post.title }}</a>
+          </strong>
+        <br>
+          {% if post.update %}<em> Updated {{ post.update | date: "%d %b %Y" }}: </em>{% endif %}{{ post.description }}
+        </p>
+        {% endif %}
+      {% endfor %}
+      <hr class="home">
+    </section>
+    <section id="new-posts">
+      <!-- ad here -->
+      <br>
+      <span id="note">New Posts</span>
+      {% for post in site.posts offset: 0 limit: 15 %}
+        <h4 class="post">
+          <strong>
+            <a href="{{ post.url }}">{{ post.title }}</a>
+          </strong>
+          <small>{{ post.date | date_to_string }}</small>
+        </h4>
+        <div class="row">
+          <div class="nine columns">
+            {{ post.description }}
+            {% if post.comments %}
+            <p>
+              [<a href="{{ post.url }}#disqus_embed">
+              Comments
+              </a>]
+            </p>
+            {% endif %}
+          </div>
+          {% if post.image[0] %}
+          <div class="three columns">
+            <a target="_blank" href="{{ post.url }}">
+              <figure class="thumb">
+                <amp-img itemprop="image" src="{{ post.image[0] }}" alt="Altcoin Trading Blog"
+                layout="fixed"
+                width="150px" height="80px">
+                </amp-img>
+              </figure>
+            </a>
+          </div>
+          {% endif %}
+        </div>
+      {% endfor %}
+      <!-- ad here -->
+    </section>
+    <section>
+      <h3>Warning - Bitfinex coins</h3>
+
+           <div class="tooltip">
+             <input type="checkbox" value="selected" id="warning-1" class="tooltip-input">
+             <label for="warning-1" class="tooltip-label">Toggle Warning</label>
+             <div role="tooltip" id="tooltipID" class="tooltip-content">
+               <div class="warning">
+                 <strong>WARNING</strong>
+                   <p>After Jan 27 2017, it is most important to check if you're getting clean coins.
+                   <a href="https://bitcointalk.org/index.php?topic=1766723.0" target="_blank">On Jan 27 someone published a list of transactions</a>
+                   that proved the bitcoins stolen in the Bitfinex hack in august 2016 started moving.</p>
+                   <p>Apparently the hacker is now trying to move small chunks of the coins to bitcoin exchanges.
+                   It is likely that they might try to use a mixing service to clean the bitcoin or that they will
+                   even set up their own mixer. </p>
+                   <p>Therefore always check where did your bitcoins came from - even
+                   if you just deposited them for lending on Poloniex. You will probably not be getting back your
+                   original bitcoins but bitcoins with a different history.</p>
+                   </div>
+            </div> <!--/.tooltip-content-->
+           </div><!--/.tooltip-->
+    </section>
+    </div>
+    <div class="four columns notopmargin">
+      {% include sidebar.html %}
+    </div>
+  </div>

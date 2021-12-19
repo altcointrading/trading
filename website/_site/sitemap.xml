@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+        <loc>http://localhost:4000</loc>
+    </url>
+    
+      
+    
+      
+    
+      
+      <url>
+          <loc>http://localhost:4000/referral-coupons/</loc>
+      </url>
+      
+    
+      
+      <url>
+          <loc>http://localhost:4000/category/arbitrage/</loc>
+      </url>
+      
+    
+      
+      <url>
+          <loc>http://localhost:4000/category/altcoins/</loc>
+      </url>
+      
+    
+      
+      <url>
+          <loc>http://localhost:4000/category/exchanges/</loc>
+      </url>
+      
+    
+      
+      <url>
+          <loc>http://localhost:4000/category/trading/</loc>
+      </url>
+      
+    
+      
+      <url>
+          <loc>http://localhost:4000/category/wallets/</loc>
+      </url>
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+
+    
+    <url>
+        <loc>http://localhost:4000/ethereum-etf-unlikely/</loc>
+    </url>
+    
+    <url>
+        <loc>http://localhost:4000/wyckoff-avoidance/</loc>
+    </url>
+    
+    <url>
+        <loc>http://localhost:4000/how-to-buy-altcoins/</loc>
+    </url>
+    
+</urlset>

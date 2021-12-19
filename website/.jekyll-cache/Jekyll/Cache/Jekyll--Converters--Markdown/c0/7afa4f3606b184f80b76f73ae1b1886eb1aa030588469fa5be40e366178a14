@@ -1,0 +1,80 @@
+I"�<p><a target="_blank" href="/img/eth/eth2.jpg"><figure class="border"><amp-img itemprop="image" src="/img/eth/eth2.jpg" alt="" layout="responsive" width="700px" height="360px"></amp-img></figure></a></p>
+
+<p><em>Image: Ethereum, Monero and the rest of it: How to buy?</em></p>
+
+<hr />
+
+<h4 id="buying-bitcoin-first">Buying bitcoin first</h4>
+
+<p>Getting an altcoin for your bitcoins that you already bought on <a class="external" rel="nofollow" target="_blank" href="https://localbitcoins.com/?ch=4nq3">localbitcoins</a> or elsewhere is the classic way to start holding or trading altcoins.</p>
+
+<p>These days, after 27 Jan 2017, it is vital to check if you’re getting clean coins though. <a href="https://bitcointalk.org/index.php?topic=1766723.0">Yesterday someone published a list of transactions</a> that proved the bitcoins stolen in the Bitfinex hack in august 2016 started moving. Apparently the hacker is now trying to move small chunks of the coins to bitcoin exchanges. It is likely that they might try to use a mixing service to clean the bitcoin or that they will even set up their own mixer.</p>
+
+<p>Therefore always check where did your bitcoins came from - even if you just deposited them for lending on Poloniex. You will probably not be getting back your original bitcoins but bitcoins with a different history.</p>
+
+<p><strong>Buy and hold</strong></p>
+
+<p>If you just want to buy an altcoin like Monero, Ether, Dash, Factom or Maid, you can use ShapeShift. You don’t need a user account, you simply send in the money. You need to have bitcoins or an altcoin and a wallet address where you want to receive the altcoin you’re buying.</p>
+
+<p><a class="external" rel="nofollow" target="_blank" href="https://shapeshift.io/#/coins">ShapeShift</a></p>
+
+<p><strong>Trading Alt/BTC pairs</strong></p>
+
+<p>The Mecca of altcoin trading. Poloniex usually lists new coins reasonably fast, all the intial trading of a new coin usually happens there. You can buy and sell on spot, you can long and short with margin and you can lend out any coin for interest. The web app is kind of sluggish at times but API is reliable.</p>
+
+<p><a class="external" rel="nofollow" target="_blank" href="https://poloniex.com">Poloniex</a></p>
+
+<p>Some smaller altcoins are not listed on Polo though. In such case they will probably be on Bittrex.</p>
+
+<p><a class="external" rel="nofollow" target="_blank" href="https://bittrex.com/home/markets">Bittrex</a></p>
+
+<p>Try and avoid Hitbtc, they don’t have a good reputation.</p>
+
+<h4 id="getting-altcoins-for-fiat">Getting altcoins for fiat</h4>
+
+<p><strong>Kraken</strong> / US (SEPA, wire)</p>
+
+<p>Altcoins: Ether, Ether Classic, Iconomi, Litecoin, Augur, Dogecoin, Lumen, Monero, Ripple, Zcash</p>
+
+<p><a class="external" rel="nofollow" target="_blank" href="https://www.kraken.com/en-gb/help/fees">Kraken fee structure coin by coin</a> shows the rates for buying an altcoin with cash might be easily the lowest for you. You need to get verified though and the support is kind of slow. And in addition to that, on slower days the less popular markets are pretty much abandoned.</p>
+
+<p><strong>Bitfinex</strong> / HK (wire only)</p>
+
+<p>Altcoins: Ether, Ether Classic, Zcash, Monero, DASH, Litecoin</p>
+
+<p><a class="external" rel="nofollow" target="_blank" href="https://www.bitfinex.com/?refcode=5egV78YtlC">Get 10% off fees on Bitfinex</a></p>
+
+<p>It is not cheap to get money to Bitfinex but their trading interface has no competition. If you want to margin  trade one of the coins that are listed on Bitfinex, go for it.</p>
+
+<p><strong>Coincheck</strong> / JP (wire or debit card - overseas cards limited to 10.000 yen a day)</p>
+
+<p>Altcoins: Ether, Ether Classic, Lisk, Factom, Monero, Augur, Ripple, Zcash</p>
+
+<p><a class="external" rel="nofollow" target="_blank" href="https://coincheck.com/?c=IHffq2cUTu4">Coincheck has a zero-fee campaign through Feb and Mar 2017</a></p>
+
+<p>Coincheck is one of the Japanese exchanges that are now getting the speculators who used to be trading bitcoin in China for as long as there was the zero-fee policy. Coincheck is one of the smaller exchanges. <a href="https://bitflyer.jp/discussion/roger-ver?top_link&amp;footer">Bitflyer</a> seems to be the one that profits from the Chinese ban on zerofee trading but Coincheck is the one that has a fine selection of altcoins.</p>
+
+<p><strong>BTC-e</strong> / RU (SEPA, eWallets, wire)</p>
+
+<p>Altcoins: Litecoin, Dash, Peercoin, Namecoin, Novacoin, Ether</p>
+
+<p><a class="external" rel="nofollow" target="_blank" href="https://btc-e.com/page/2">Trading fee is always 0.2 perc</a> and prices are lower but deposit and withdrawal fees make up for it.</p>
+
+<p><strong>BitStamp</strong> / EU (SEPA, wire)</p>
+
+<p>Altcoins: Ripple</p>
+
+<p><a class="external" rel="nofollow" target="_blank" href="https://www.bitstamp.net/market/tradeview/">Bitstamp’s tradeview</a> is good but liquidity is next to nonexistent. When they setup a new market, like just now with Ripple, nobody is really running in to trade there.</p>
+
+<h4 id="altcoin-storage-the-altcoin-wallets">Altcoin Storage: The Altcoin Wallets</h4>
+
+<p>You have two options - an altcoin-specific wallet or a multi-altcoin wallet. In any case, it is always a bad idea to leave your coin on an exchange. That doesn’t mean that an altcoin in an altcoin-specific wallet is automatically 100% safe though.</p>
+
+<p>Keep in mind that all altcoins are works in progress - even the big ones like Ether. <strong>There are bugs in the software</strong>. <a href="https://github.com/ethereum/mist/releases">See the Ethereum’s Mist release notes on Github</a></p>
+
+<p>Because of that, proprietary wallets might not always be the best bet. The Jaxx might be much better - but it doesn’t support all the altcoins.</p>
+
+<p>You will need to compromise a bit but it certainly won’t hurt if you simulate cold storage by having your desktop wallets on a computer that is mostly offline and that you don’t use for your day to day web browsing or downloading.</p>
+
+<p><a href="/altcoin-wallets/">Full post on altcoin wallets here</a>.</p>
+:ET

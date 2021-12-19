@@ -1,0 +1,29 @@
+# Site settings
+title:        "Altcoin Trading Theme"
+subtitle:     "Free version of the AltcoinTrading.NET theme"
+description:  "Altcoin Trading is the forex of cryptocurrencies, with bitcoin as the base currency."
+baseurl:      ""
+url:          "https://trading.tdou.dev"
+ga:           UA-XXXXXXXXX
+email:        "info@example.com"
+disqusembed:  "https://amp2disqus.netlify.com/altcointrading/"
+
+timezone:     "Etc/GMT"
+exclude:      [node_modules,  README.md]
+keep_files:   [img, assets]
+plugins:      [jekyll-paginate, jekyll-last-modified-at, jekyll-archives]
+paginate:     10
+author:       "AltcoinTrading"
+markdown:     kramdown
+
+## Default image size: 700x360
+
+ads:
+  ledger: '<div class="text-center">
+  <a rel="nofollow" target="_blank" href="#">
+  <amp-img itemprop="image" alt="Ledger Wallet protects your bitcoins"
+  src="https://via.placeholder.com/468x90"
+  layout="responsive"
+  data-original-width="468px" data-original-height="90px"
+  width="468px" height="90px"></amp-img>
+  </a></div>'

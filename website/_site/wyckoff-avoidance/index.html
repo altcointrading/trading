@@ -1,0 +1,943 @@
+<!DOCTYPE html>
+<html amp lang="en">
+<head>
+<meta charset="utf-8">
+<title>Avoidance Strategy in Altcoin Trading</title>
+<link rel="icon" type="image/png" href="http://localhost:4000/img/favicon.ico">
+<link rel="canonical" href="http://localhost:4000/wyckoff-avoidance/">
+<meta name="description" content="The Wyckoff style is to trade only the best stocks in the leading sectors. Can you use this motto when trading cryptocurrencies?">
+<meta name="author" content="AltcoinTrading">
+<meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+<!-- custom resources -->
+<style amp-custom>
+  /*! normalize.css v3.0.2 | MIT License | git.io/normalize */html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,details,figcaption,figure,footer,header,hgroup,main,menu,nav,section,summary{display:block}audio,canvas,progress,video{display:inline-block;vertical-align:baseline}audio:not([controls]){display:none;height:0}[hidden],template{display:none}a{background-color:transparent}a:active,a:hover{outline:0}abbr[title]{border-bottom:1px dotted}b,strong{font-weight:bold}dfn{font-style:italic}h1{font-size:2em;margin:.67em 0}mark{background:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sup{top:-0.5em}sub{bottom:-0.25em}img{border:0}svg:not(:root){overflow:hidden}figure{margin:1em 40px}hr{-moz-box-sizing:content-box;box-sizing:content-box;height:0}pre{overflow:auto}code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em}button,input,optgroup,select,textarea{color:inherit;font:inherit;margin:0}button{overflow:visible}button,select{text-transform:none}button,html input[type="button"],input[type="reset"],input[type="submit"]{-webkit-appearance:button;cursor:pointer}button[disabled],html input[disabled]{cursor:default}button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}input{line-height:normal}input[type="checkbox"],input[type="radio"]{box-sizing:border-box;padding:0}input[type="number"]::-webkit-inner-spin-button,input[type="number"]::-webkit-outer-spin-button{height:auto}input[type="search"]{-webkit-appearance:textfield;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box}input[type="search"]::-webkit-search-cancel-button,input[type="search"]::-webkit-search-decoration{-webkit-appearance:none}fieldset{border:1px solid #c0c0c0;margin:0 2px;padding:.35em .625em .75em}legend{border:0;padding:0}textarea{overflow:auto}optgroup{font-weight:bold}table{border-collapse:collapse;border-spacing:0}td,th{padding:0}
+  /* Skeleton V2.0.4 | Copyright 2014, Dave Gamache | www.getskeleton.com | Free to use under the MIT license. | http://www.opensource.org/licenses/mit-license.php | 12/29/2014 */
+.container{position:relative;width:100%;max-width:960px;margin:0 auto;padding:0 20px;box-sizing:border-box}.column,.columns{width:100%;float:left;box-sizing:border-box}@media(min-width:400px){.container{width:85%;padding:0}}@media(min-width:550px){.container{width:80%}.column,.columns{margin-left:4%}.column:first-child,.columns:first-child{margin-left:0}.one.column,.one.columns{width:4.66666666667%}.two.columns{width:13.3333333333%}.three.columns{width:22%}.four.columns{width:30.6666666667%}.five.columns{width:39.3333333333%}.six.columns{width:48%}.seven.columns{width:56.6666666667%}.eight.columns{width:65.3333333333%}.nine.columns{width:74.0%}.ten.columns{width:82.6666666667%}.eleven.columns{width:91.3333333333%}.twelve.columns{width:100%;margin-left:0}.one-third.column{width:30.6666666667%}.two-thirds.column{width:65.3333333333%}.one-half.column{width:48%}.offset-by-one.column,.offset-by-one.columns{margin-left:8.66666666667%}.offset-by-two.column,.offset-by-two.columns{margin-left:17.3333333333%}.offset-by-three.column,.offset-by-three.columns{margin-left:26%}.offset-by-four.column,.offset-by-four.columns{margin-left:34.6666666667%}.offset-by-five.column,.offset-by-five.columns{margin-left:43.3333333333%}.offset-by-six.column,.offset-by-six.columns{margin-left:52%}.offset-by-seven.column,.offset-by-seven.columns{margin-left:60.6666666667%}.offset-by-eight.column,.offset-by-eight.columns{margin-left:69.3333333333%}.offset-by-nine.column,.offset-by-nine.columns{margin-left:78.0%}.offset-by-ten.column,.offset-by-ten.columns{margin-left:86.6666666667%}.offset-by-eleven.column,.offset-by-eleven.columns{margin-left:95.3333333333%}.offset-by-one-third.column,.offset-by-one-third.columns{margin-left:34.6666666667%}.offset-by-two-thirds.column,.offset-by-two-thirds.columns{margin-left:69.3333333333%}.offset-by-one-half.column,.offset-by-one-half.columns{margin-left:52%}}html{font-size:62.5%}body{font-size:1.5em;line-height:1.6;font-weight:400;font-family:"Raleway","HelveticaNeue","Helvetica Neue",Helvetica,Arial,sans-serif;color:#222}h1,h2,h3,h4,h5,h6{margin-top:0;margin-bottom:2rem;font-weight:300}h1{font-size:4.0rem;line-height:1.2;letter-spacing:-.1rem}h2{font-size:3.6rem;line-height:1.25;letter-spacing:-.1rem}h3{font-size:3.0rem;line-height:1.3;letter-spacing:-.1rem}h4{font-size:2.4rem;line-height:1.35;letter-spacing:-.08rem}h5{font-size:1.8rem;line-height:1.5;letter-spacing:-.05rem}h6{font-size:1.5rem;line-height:1.6;letter-spacing:0}@media(min-width:550px){h1{font-size:5.0rem}h2{font-size:4.2rem}h3{font-size:3.6rem}h4{font-size:3.0rem}h5{font-size:2.4rem}h6{font-size:1.5rem}}p{margin-top:0}a{color:#1eaedb}a:hover{color:#0fa0ce}.button,button,input[type="submit"],input[type="reset"],input[type="button"]{display:inline-block;height:38px;padding:0 30px;color:#555;text-align:center;font-size:11px;font-weight:600;line-height:38px;letter-spacing:.1rem;text-transform:uppercase;text-decoration:none;white-space:nowrap;background-color:transparent;border-radius:4px;border:1px solid #bbb;cursor:pointer;box-sizing:border-box}.button:hover,button:hover,input[type="submit"]:hover,input[type="reset"]:hover,input[type="button"]:hover,.button:focus,button:focus,input[type="submit"]:focus,input[type="reset"]:focus,input[type="button"]:focus{color:#333;border-color:#888;outline:0}.button.button-primary,button.button-primary,input[type="submit"].button-primary,input[type="reset"].button-primary,input[type="button"].button-primary{color:#FFF;background-color:#33c3f0;border-color:#33c3f0}.button.button-primary:hover,button.button-primary:hover,input[type="submit"].button-primary:hover,input[type="reset"].button-primary:hover,input[type="button"].button-primary:hover,.button.button-primary:focus,button.button-primary:focus,input[type="submit"].button-primary:focus,input[type="reset"].button-primary:focus,input[type="button"].button-primary:focus{color:#FFF;background-color:#1eaedb;border-color:#1eaedb}input[type="email"],input[type="number"],input[type="search"],input[type="text"],input[type="tel"],input[type="url"],input[type="password"],textarea,select{height:38px;padding:6px 10px;background-color:#fff;border:1px solid #d1d1d1;border-radius:4px;box-shadow:none;box-sizing:border-box}input[type="email"],input[type="number"],input[type="search"],input[type="text"],input[type="tel"],input[type="url"],input[type="password"],textarea{-webkit-appearance:none;-moz-appearance:none;appearance:none}textarea{min-height:65px;padding-top:6px;padding-bottom:6px}input[type="email"]:focus,input[type="number"]:focus,input[type="search"]:focus,input[type="text"]:focus,input[type="tel"]:focus,input[type="url"]:focus,input[type="password"]:focus,textarea:focus,select:focus{border:1px solid #33c3f0;outline:0}label,legend{display:block;margin-bottom:.5rem;font-weight:600}fieldset{padding:0;border-width:0}input[type="checkbox"],input[type="radio"]{display:inline}label>.label-body{display:inline-block;margin-left:.5rem;font-weight:normal}ul{list-style:circle inside}ol{list-style:decimal inside}ol,ul{padding-left:0;margin-top:0}ul ul,ul ol,ol ol,ol ul{margin:1.5rem 0 1.5rem 3rem;font-size:90%}li{margin-bottom:1rem}code{padding:.2rem .5rem;margin:0 .2rem;font-size:90%;white-space:nowrap;background:#f1f1f1;border:1px solid #e1e1e1;border-radius:4px}pre>code{display:block;padding:1rem 1.5rem;white-space:pre}th,td{padding:12px 15px;text-align:left;border-bottom:1px solid #e1e1e1}th:first-child,td:first-child{padding-left:0}th:last-child,td:last-child{padding-right:0}button,.button{margin-bottom:1rem}input,textarea,select,fieldset{margin-bottom:1.5rem}pre,blockquote,dl,figure,table,p,ul,ol,form{margin-bottom:2.5rem}.u-full-width{width:100%;box-sizing:border-box}.u-max-full-width{max-width:100%;box-sizing:border-box}.u-pull-right{float:right}.u-pull-left{float:left}hr{margin-top:3rem;margin-bottom:3.5rem;border-width:0;border-top:1px solid #e1e1e1}.container:after,.row:after,.u-cf{content:"";display:table;clear:both}
+
+  
+body {
+    font-family: 'Droid Sans', sans-serif;
+    color: #413F4F;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Slabo 27px', serif;
+}
+
+hr.home {
+  border-top: 2px solid #7A838D;
+}
+
+
+.logo {
+  width: 75px;
+  float:left;
+  margin-right: 10px;
+}
+.textlogo {
+  display: block;
+  float: left;
+  padding-top: 6px;
+}
+
+
+.maincontent h3 {
+  margin-top: 0px;
+  background: rgba(122, 131, 141, 0.64);
+  color: #fff;
+  padding: 5px 10px 3px;
+  margin-left: -10px;
+  font-size: 2.3rem;
+}
+.maincontent p a{
+  border-bottom: 2px solid #7A838D;
+}
+.maincontent img a{
+  border-bottom: 0px solid #7A838D;
+}
+
+
+
+.nomargintop {
+  margin-top:0
+}
+ul {
+    list-style: circle ;
+}
+
+ul>li>a.coin {
+  background: #7a838d;
+    color: white;
+    padding: 5px 10px;
+}
+
+
+.warning {
+    background: #FF4136;
+    color: #fff;
+    padding: 1em 2em;
+    margin: 1em 0 2em;
+    width: auto;
+    position: relative;
+    left: -10px;
+}
+
+/* css toggle */
+
+.tooltip-label {
+font-size: 1em;
+background: #7A838D;
+padding: 0.4em;
+cursor: pointer;
+display: inline-block;
+margin-bottom: 1em;
+color: white;
+margin-left: -10px;
+margin-top: 10px;
+font-weight: 400;
+}
+.tooltip-input {
+  display: none  ;
+  visibility: hidden;
+} /*Hide input element*/
+
+.tooltip-content {
+  margin-bottom: 1.5em;
+}
+.tooltip-input:not(checked) ~ .tooltip-content {
+  display: none;
+}
+.tooltip-input:checked ~ .tooltip-content {
+  display: block;
+}
+
+
+/**/
+
+
+
+h4.post {
+    margin-top: 0px;
+    background: #7A838D;
+    color: #fff;
+    padding: 5px 10px 3px;
+    margin-left: -10px;
+}
+
+a.last {
+    color: #fff;
+    background: #FF4136;
+    padding: 5px
+}
+
+.exa {
+    background: #001f3f;
+    color: #fff;
+    padding: 10px;
+    margin-left: -10px
+}
+
+a {
+    color: #001f3f;
+    text-decoration: none ;
+}
+
+a:hover {
+    color: rgba(0, 31, 63, 0.77);
+}
+
+img.post {
+    max-width: 100%
+}
+
+span#note {
+    background: #001f3f;
+    color: #fff;
+    position: relative;
+    left: -10px;
+    padding: 3px 10px;
+    -webkit-transition: all .2s ease-in-out;
+    -moz-transition: all .2s ease-in-out;
+    -ms-transition: all .2s ease-in-out;
+    -o-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out
+}
+
+span#note:hover {
+    left: -15px
+}
+
+nav.main {
+    line-height: 2.4;
+    font-size: 1.8rem;
+    font-family: "Droid Sans", sans-serif
+}
+
+nav.main a {
+    color: #001f3f;
+    text-decoration: none
+}
+
+nav.main a:hover {
+    color: #001f3f;
+    font-weight: 800
+}
+
+ul.navi {
+    display: inline
+}
+
+ul.navi li {
+    list-style-type: none;
+    display: inline-block;
+    font-size: 1.6rem;
+    margin-right:15px;
+    font-weight:800;
+    padding-left: 0 ;
+    margin-bottom: 0.3rem ;
+
+}
+
+ul.navi li:first-of-type {
+    padding-left: 0
+}
+
+nav ul ul {
+    display: none;
+    margin-left: 0 ;
+    position: absolute;
+    top: 70px;
+    background: rgba(255, 255, 255, 0.7);
+    border: 1px solid #000;
+    padding: 1px 10px;
+    z-index: 10
+}
+
+nav ul li:hover > ul {
+    display: block
+}
+
+nav ul ul li {
+    float: none;
+    display: block ;
+    position: relative;
+    padding: 0 ;
+}
+
+
+nav ul ul li a {
+    font-size: 1.3rem
+}
+
+#side2 ul li,
+#sidebar ul.sq li {
+    list-style-type: square;
+    font-size: 1.3rem
+}
+
+#side2 ul li a,
+#sidebar ul.sq li a {
+    text-decoration: none
+}
+
+
+ul.divided li {
+    list-style-type: none
+}
+ul.divided li div {
+  text-align:center;
+}
+
+#sidebar h3,
+#sidebar h3 a {
+    font-size: 1.8rem;
+    color: #001f3f ;
+    background: transparent;
+    padding: 15px 0;
+    font-weight: 800;
+    border-bottom: 2px solid #7A838D;
+}
+
+#sidebar img,
+#sidebar iframe {
+    width: 99%;
+    border: 0
+}
+
+#side2 h3,
+#side2 h3 a {
+    font-size: 1.8rem;
+    color: #fff ;
+    background: #111;
+    padding: 5px 15px
+}
+
+.container {
+    max-width: 1200px
+}
+
+.stripe {
+  margin: 0;
+    padding: 20px 0;
+    color: #7A838D ;
+    background: #fff;
+    margin-left: auto ;
+    margin-right: auto ;
+    width: 101% ;
+    border-bottom: 2px solid #7A838D;
+  }
+
+.stripe .hl a {
+  font-family: 'Slabo 27px', serif;
+    float: left;
+    margin-bottom: 0;
+    font-size: 4rem;
+    line-height: 1.3;
+    letter-spacing: -.1rem;
+    text-decoration: none;
+    color: #001f3f;
+    font-weight: 800;
+}
+
+.stripe p {
+    color: #aaa;
+    margin-bottom: 0
+}
+
+.stripe small {
+    float: left;
+    display: block;
+    width: 100%;
+}
+
+figure.post {
+    max-width: 100% ;
+    margin: 0 0 30px;
+}
+figure.border {
+max-width: 100% ;
+margin: 0 0 30px;
+border: 2px dotted #7A838D;
+}
+figure.thumb {
+  position: relative;
+    width: auto;
+    height: auto;
+    display: block;
+    clear: both;
+    max-width: 200px;
+    padding: 0;
+    margin: 0;
+    text-align: right;
+    margin-bottom: 13px;
+}
+
+.notopmargin {
+  margin-top:0;
+}
+.shifted-left{
+  margin-left: -10px;
+}
+.text-center{
+  text-align:center;
+}
+
+.footer{
+line-height: 50px;
+border-top: 2px solid #7A838D;
+font-size: 80%;
+}
+.contacticon .center {font-size: 30px;
+    text-align: center;
+    display: block;}
+
+figure.chart {margin:1.5em 0}
+figure.noborder {
+    max-width: 100%  ;
+    margin: 0 0 30px;
+    border: 0px dotted #7A838D;
+}
+
+
+.clearfix {
+  clear: both;
+}
+.adfix {
+  clear: both;
+    display: block;
+    float: left;
+    position: relative;
+    width: 100%;
+    margin-bottom: 1.5em;
+}
+
+/* Media Queries */
+/* Larger than mobile */
+@media (min-width: 400px) {}
+/* Larger than phablet (also point when grid becomes active) */
+@media (min-width: 550px) {
+  h4 {font-size: 2.3rem;}
+}
+/* Larger than tablet */
+@media (min-width: 750px) {
+ #togglemenu {
+   display: none;
+ }
+}
+/* Larger than desktop */
+@media (min-width: 1000px) {}
+/* Larger than Desktop HD */
+@media (min-width: 1200px) {}
+
+  @media (max-width: 750px) {
+   #desktopmenu {
+     display: none;
+   }
+   .swapper {
+     display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -moz-box-orient: vertical;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: start;
+    -moz-box-align: start;
+    -ms-flex-align: start;
+    -webkit-align-items: flex-start;
+    align-items: flex-start;
+   }
+   #new-posts {
+     -webkit-box-ordinal-group: 1;
+    -moz-box-ordinal-group: 1;
+    -ms-flex-order: 1;
+    -webkit-order: 1;
+    order: 1;
+   }
+   #popular-posts {
+     -webkit-box-ordinal-group: 2;
+    -moz-box-ordinal-group: 2;
+    -ms-flex-order: 2;
+    -webkit-order: 2;
+    order: 2;
+   }
+  }
+
+@media (max-width: 500px) {
+  ul.navi li {
+    min-width: 100%;
+    padding-left: 0 ;
+    text-align: center;
+  }
+  .stripe .hl a {
+    text-align: center;
+    width: 100%;
+  }
+  .stripe small {
+    padding-left: 0;
+    width: 100%;
+    text-align: center;
+  }
+  img, figure {
+    max-width: 100% ;
+  }
+  .tooltip-label-menu {
+    font-size: 1em;
+    background: #ff4136;
+    padding: 0.4em;
+    cursor: pointer;
+    display: block;
+    margin-bottom: 2em;
+    color: white;
+    margin-left: -10px;
+    margin-top: 0;
+    font-weight: 400;
+  }
+}
+
+</style>
+<!-- allowed resources -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href='https://fonts.googleapis.com/css?family=Droid+Sans:400,700|Slabo+27px' rel='stylesheet'>
+<!--langs-->
+<link rel="alternate" href="http://localhost:4000/wyckoff-avoidance/" hreflang="en-us" />
+
+<link rel="alternate" href="https://de.altcointrading.net/wyckoff/" hreflang="de-de" />
+
+<!--AMP-->
+<script async src="https://cdn.ampproject.org/v0.js"></script>
+<script async custom-element="amp-iframe" src="https://cdn.ampproject.org/v0/amp-iframe-0.1.js"></script>
+<script async custom-element="amp-analytics"
+    src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
+<style>body {opacity: 0}</style>
+<style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style>
+<noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "NewsArticle",
+  "mainEntityOfPage":{
+    "@type":"WebPage",
+    "@id":"http://localhost:4000/wyckoff-avoidance/"
+  },
+  "headline": "Avoidance Strategy in Altcoin Trading",
+  "image": {
+    "@type": "ImageObject",
+    "url": "http://localhost:4000/img/emotions/standby.JPG",
+    "height": 700,
+    "width": 360,
+    "associatedArticle": "http://localhost:4000/wyckoff-avoidance/",
+    "caption": "Wyckoffian Avoidance Strategy?"
+  },
+  "datePublished": "2017-03-08 00:00:00 +0000",
+  "dateModified": "2017-03-09 00:00:00 +0100",
+  "author": {
+    "@type": "Person",
+    "name": "Altcoin Trader"
+  },
+   "publisher": {
+    "@type": "Organization",
+    "name": "AltcoinTrading.net",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "http://localhost:4000/img/logo.jpg",
+      "width": 75,
+      "height": 90
+    }
+  },
+  "description": "The Wyckoff style is to trade only the best stocks in the leading sectors. Can you use this motto when trading cryptocurrencies?"
+}
+</script>
+
+</head>
+
+<body>
+<div class="container">
+  <div class="row">
+    <div class="twelve columns stripe">
+      <div class="logo">
+        <amp-img itemprop="image" alt="Altcoin Trading Theme"
+        src="http://localhost:4000/img/logo.jpg"
+        layout="responsive"
+        data-original-width="75px" data-original-height="90px"
+        width="75px" height="90px"></amp-img>
+      </div>
+      <div class="textlogo">
+        <div class="hl"><a href="/">Altcoin Trading Theme</a></div>
+        <small><em>Free version of the AltcoinTrading.NET theme</em></small>
+      </div>
+    </div>
+    <div class="tooltip" id="togglemenu">
+      <input type="checkbox" value="selected" id="mobile-menu-1" class="tooltip-input">
+      <label for="mobile-menu-1" class="tooltip-label-menu">
+        <i class="fa fa-bars fa-2" aria-hidden="true"></i>&nbsp;MENU
+      </label>
+      <div role="tooltip" id="togglemenuID" class="tooltip-content">
+
+        <nav class="main">
+          <div class="twelve columns">
+            <ul class="navi">
+
+              
+              
+              
+              
+              
+              
+              <li><a href="http://localhost:4000/referral-coupons/">coupons</a></li>
+              
+              
+              
+              <li><a href="http://localhost:4000/category/arbitrage/">arbitrage trading</a></li>
+              
+              
+              
+              <li><a href="http://localhost:4000/category/altcoins/">best altcoins</a></li>
+              
+              
+              
+              <li><a href="http://localhost:4000/category/exchanges/">altcoin exchanges</a></li>
+              
+              
+              
+              <li><a href="http://localhost:4000/category/trading/">altcoin trading</a></li>
+              
+              
+              
+              <li><a href="http://localhost:4000/category/wallets/">altcoin wallets</a></li>
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+
+              <li><a class="coin" href="/coin/dash/">DASH</a></li>
+              <li><a class="coin" href="/coin/eth/">ETH</a></li>
+              <li><a class="coin" href="/coin/xmr/">XMR</a></li>
+            </ul>
+
+
+          </div>
+        </nav>
+
+     </div> <!--/.tooltip-content-->
+    </div><!--/.tooltip-->
+  </div>
+  <nav class="main" id="desktopmenu">
+    <div class="twelve columns">
+      <ul class="navi">
+
+        
+        
+        
+        
+        
+        
+        <li><a href="http://localhost:4000/referral-coupons/">coupons</a></li>
+        
+        
+        
+        <li><a href="http://localhost:4000/category/arbitrage/">arbitrage trading</a></li>
+        
+        
+        
+        <li><a href="http://localhost:4000/category/altcoins/">best altcoins</a></li>
+        
+        
+        
+        <li><a href="http://localhost:4000/category/exchanges/">altcoin exchanges</a></li>
+        
+        
+        
+        <li><a href="http://localhost:4000/category/trading/">altcoin trading</a></li>
+        
+        
+        
+        <li><a href="http://localhost:4000/category/wallets/">altcoin wallets</a></li>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+
+        <li><a class="coin" href="/coin/dash/">DASH</a></li>
+        <li><a class="coin" href="/coin/eth/">ETH</a></li>
+        <li><a class="coin" href="/coin/xmr/">XMR</a></li>
+      </ul>
+
+
+    </div>
+  </nav>
+
+</div>
+
+<div class="container">
+  <div class="row">
+
+   <div class="eight columns">
+     <div class="shifted-left">
+       <!-- ad here -->
+     </div>
+       <span id="note">
+         <time datetime="2017-03-08T00:00:00+00:00">08 Mar 2017</time>
+       </span>
+       <h4 class="post">
+          <strong>
+            Avoidance Strategy in Altcoin Trading
+          </strong>
+        </h4>
+        
+        <small>
+          <time datetime="2017-03-09T00:00:00+00:00">
+            Last Update: 09 Mar 2017
+          </time>
+        </small>
+        
+        <article class="maincontent">
+
+          <div class="row intext">
+            <p><a target="_blank" href="/img/emotions/standby.JPG"><figure class="border"><amp-img itemprop="image" src="/img/emotions/standby.JPG" alt="" layout="responsive" width="700px" height="360px"></amp-img></figure></a></p>
+
+<p><em>Image: Wyckoffian Avoidance Strategy?</em></p>
+
+<hr />
+
+<p>Wyckoff method is getting popular in the cryptocurrency space mainly because John Bollinger the author of bbands keeps recommending it on twitter.</p>
+
+<p>While it can be called a “legacy” thing no doubt it is useful for crypto as well:</p>
+
+<blockquote class="twitter-tweet" data-lang="en-gb"><p lang="en" dir="ltr"><a href="https://twitter.com/kenzboard">@kenzboard</a> <a href="https://twitter.com/MrJozza">@MrJozza</a> Yeah, Wyckoff is as near to a universal key to understanding trading as we have.</p>&mdash; John Bollinger (@bbands) <a href="https://twitter.com/bbands/status/835170564431962112">24 February 2017</a></blockquote>
+
+<h4 id="the-value-trading">The value trading</h4>
+
+<p>The Wyckoff style is to trade only the best stocks in the leading sectors. Can you use this motto when trading cryptocurrencies? It is an emerging asset class but figuring out which cryptocurrency has actual <strong>value</strong> will make your decisions a lot clearer:</p>
+
+<ul>
+  <li>You want to buy/hold a <em>valuable</em> asset through shorter timespans when the <em>price</em> is not reflecting the value (yet).</li>
+  <li>You want to take profits and abandon an asset that is appreciating in the short term because of things like tiny market hence manipulation, or media hype.</li>
+</ul>
+
+<h4 id="how-strong-a-coin-is">How strong a coin is</h4>
+
+<blockquote>
+  <p>The Wyckoffian mission is to trade and invest in the best stocks in the leading Industry Groups. We have been studying examples of leadership characteristics using <strong>Wyckoff Analysis</strong> in combination with <strong>Relative Strength</strong>. […] Always seeking the strongest stocks in the strongest groups. It is also a worthwhile exercise to study groups that are stalling and falling from favor. <a href="http://stockcharts.com/articles/wyckoff/2017/02/avoidance-strategy.html">StockCharts</a></p>
+</blockquote>
+
+<p>The key point is that a leader of a group dies not remain a leader indefinitely. At some point the leader leaves the limelight, becomes a laggard and may stay a laggard for some time. That’s what the Wyckoff avoidance strategy is about - spotting the transition from leader to laggard and avoiding longing that market rather than getting to think in forever terms.</p>
+
+<p>This transition is a substantial change, technically you should be looking for it on longer timeframes (daily, 3D or weekly charts).</p>
+
+<h4 id="select-assets-that-are-in-harmony-with-the-market">Select assets that are in harmony with the market</h4>
+
+<blockquote>
+  <p>In a <strong>bull (uptrend) market</strong>, select [assets] that are <strong>stronger than the market itself</strong>. In a bear market choose those that are weaker than the market itself.</p>
+</blockquote>
+
+<p>If you figure out consistently strong cryptocurrencies and their counterparts you have your best candidates for mid-term longs and shorts:</p>
+
+<ul>
+  <li>Strong altcoins rally quite easily but after the rally retraces some of the gains remain.</li>
+  <li>Weak altcoins are traded but don’t rally consistently. If they do, the retrace kills all the gains.</li>
+</ul>
+
+<p>In legacy markets one can compare stocks against a composite index. In a bull market well below a known resistance line, if a stock gains more than the index, it’s typically a good bet to open a long, avoding all the rest of the assets in the group. If the resistance approaches it’s time to close that long and find which stock was performing poorly in the rally. That is going to be to one most likely to drop significantly, you can short it and avoid trading the strong performers.</p>
+
+<p>In cryptocurrencies we don’t have an index that would track the performance of top 100 or 500 altcoins. You will have to put in a little bit more work.</p>
+
+<p>A handy tool that will help you do that is <a href="http://coinmarketcap.com/">coinmarketcap.com</a>.</p>
+
+<p>You can track the historical weekly performance of cryptocurrencies at <a href="http://coinmarketcap.com/historical/">http://coinmarketcap.com/historical/</a> - this page has snapshots dating back to 2013.</p>
+
+<p>Daily data is available at <a href="http://coinmarketcap.com/#BTC">the homepage</a> or from their API. If you are trading altcoins against BTC, that is pairs like ETHBTC, you should switch to BTC pricing. This way you’ll see which altcoins perform the best and the worst against bitcoin.</p>
+
+<p><a target="_blank" href="/img/trading/cmc-snapshot.jpg"><figure class="border"><amp-img itemprop="image" src="/img/trading/cmc-snapshot.jpg" alt="" layout="responsive" width="700px" height="360px"></amp-img></figure></a></p>
+
+<p>Going through the weekly data from 2016 you can filter each table by traded volume.</p>
+
+<ul>
+  <li>You’ll see that small altcoins show up every week with immense gains but after some weeks you don’t hear about them again.</li>
+  <li>On the other hand, for instance litecoin is consistently being traded but the price doesn’t change much - perhaps people use it to move funds across exchanges instead of using fiat but next to no people believe it is worth to hold LTC.</li>
+  <li>Ethereum and Dash have volumes in the upper part of the spectrum but they actually see a rally or two once in a while with gains that don’t completely disappear after the retrace.</li>
+</ul>
+
+<h4 id="going-back-to-individual-coins">Going back to individual coins</h4>
+
+<p>To spot the beginning of short term changes in the market, topping patterns and reversals you will have to go back to individual cryptocurrencies. The chart below is a bitcoin chart but the same TA is valid with all commonly traded coins with good holder base these days.</p>
+
+<p>What people use the most to spot these changes is Parabolic SAR, RSI and MACD. You can use <a class="external" rel="nofollow" target="_blank" href="https://cryptowat.ch">Cryptowatch</a> for the basics or <a class="external" rel="nofollow" target="_blank" href="http://tradingview.go2cloud.org/SHW9">TradingView</a> which provides interface where you can tune the indicator parameters and do some very basic backtesting. To name one, the default Parabolic SAR will be too sensitive, giving you flips that will be a false positive so you should pick your timeframe and tune the PSAR settings so that it flips really mostly only before a reversal historically happened on that timeframe.</p>
+
+<p>The hourly bitcoin chart below shows a SAR set to <code class="language-plaintext highlighter-rouge">0.025, 0.02, 0.03</code> on <a class="external" rel="nofollow" target="_blank" href="http://tradingview.go2cloud.org/SHW9">TradingView</a>. If you click on the picture to zoom it you’ll see it flipping, and if you look at the RSI at the bottom you’ll see a divergence between the RSI lows and the price lows, which is bullish as it shows the lows are too low for the strength of the market.</p>
+
+<p><a target="_blank" href="/img/trading/btc-rsidiv.png"><figure class="border"><amp-img itemprop="image" src="/img/trading/btc-rsidiv.png" alt="" layout="responsive" width="700px" height="360px"></amp-img></figure></a></p>
+
+<p>Of course in both bitcoin and altcoins you cannot discount “conspiracy theories” about whales manipulating the markets - given the (little) money one needs to do that it’s entirely possible. Even the legacy guys found it out themselves, I encourage you to read the following excerpt from FT where an investor whines about getting rekt on OkCoin because of a bearwhale, it’s hilarious.</p>
+
+<blockquote>
+  <p>this is from ft, somehow archive.is works around their log in wall: http://archive.is/aQ7Om</p>
+</blockquote>
+
+<blockquote>
+  <p>Daniel Masters, the founder of one of the world’s first bitcoin funds – Jersey-based Global Advisors Bitcoin Investment Program (GABI) – is calling for position limits on bitcoin exchanges, after falling prey to a heinous case of cash-to-futures basis manipulation in February, when bitcoin soared to new record high.</p>
+</blockquote>
+
+<blockquote>
+  <p><em>Our position was liquidated at $767 and, needless to say, by the time we were back in the market the price was shooting back above $900. This was of course an extremely unfortunate state of affairs in which to find ourselves and a hard lesson learned. Accordingly, we lost around 10% of performance against our benchmark, the USD price of bitcoin. The matters set out above highlighted another issue with bitcoin trading, which up until this point we had not considered. After the price drop, one player emerged as totally dominant in the open interest of the futures contract. It seemed pretty clear to us as a result that this event was not just a normal version of a large liquidation, with which we are familiar, but was a premeditated attack. When the dust settled, one unidentified player was short well over half the open interest. We would therefore class this episode as clear market manipulation, and in fact it was not just momentary: for many days thereafter the basis was so weak that it seemed that the one attack was being followed up by periodic smaller attacks. As such we approached the exchange. They confirmed to us that there were no position limits whatsoever and that people were free to do whatever they wanted in their “happy trading environment” (yes, they used those actual words). We made it very clear that such activity, whether in a regulated environment or not, might amount to criminality in Hong Kong and would certainly do so in many other jurisdictions. Following a number of discussions, the exchange encouraged the ‘rogue’ player to withdraw and things have now normalized.</em></p>
+</blockquote>
+
+<blockquote>
+  <p>“happy trading environment” from hong kong…that’s okcasino amirite <a href="https://www.reddit.com/r/BitcoinMarkets/comments/5y5qzz/daily_discussion_wednesday_march_08_2017/deo070z/">via r/bitcoinmarkets</a></p>
+</blockquote>
+
+<hr />
+
+<p>In the next days I’ll be looking over altcoins historical performance so stay tuned for next posts.</p>
+
+<hr />
+
+<p><strong>Reading</strong></p>
+
+<ul>
+  <li><a href="http://technical.traders.com/tradersonline/display.asp?art=167">http://technical.traders.com/tradersonline/display.asp?art=167</a></li>
+  <li><a href="https://stockcharts.com/articles/wyckoff/">https://stockcharts.com/articles/wyckoff/</a></li>
+</ul>
+
+          </div>
+
+          
+            
+            <div class="row comments">
+              <h4 class="post comment" id="disqus_embed">Comment on "Avoidance Strategy in Altcoin Trading"</h4>
+              <amp-iframe width=600 height=700
+                layout="responsive"
+                sandbox="allow-scripts allow-same-origin allow-modals allow-popups allow-forms"
+                resizable
+                src="https://amp2disqus.netlify.com/altcointrading/#wyckoff-avoidance/">
+                <div overflow tabindex=0 role=button aria-label="Read more">Read more!</div>
+              </amp-iframe>
+            </div>
+            
+          
+
+        </article>
+    </div>
+    <div class="four columns nomargintop">
+      <div id="sidebar">
+  <section>
+    <ul class="divided">
+      <li>
+        <div>
+          <amp-iframe
+            width=336 height=280
+            layout="responsive"
+            data-aa="147074"
+            sandbox="allow-scripts allow-same-origin allow-modals allow-popups allow-forms"
+            src="https://ad.a-ads.com/147074?size=336x280">
+            <amp-img layout="fill" src="/img/ad-placeholder.jpg" placeholder></amp-img>
+          </amp-iframe>
+        </div>
+      </li>
+      <li>
+        <h3>Coupon Codes For Crypto Exchanges:</h3>
+        <ul>
+          <li>
+            <a  target="_blank" rel="nofollow" href="https://www.bitfinex.com/?refcode=5egV78YtlC" >BITFINEX COUPON <b>5egV78YtlC</b> (10% off fee)</a>
+          </li>
+          <li>
+            <a  target="_blank" rel="nofollow" href="https://www.bitmex.com/register/iYQB44">BITMEX COUPON <b>iYQB44</b> (10% off fee)</a>
+          </li>
+        </ul>
+      </li>
+      <li>
+      <h3>Hardware Wallet for altcoins:</h3>
+        <br>
+        <a href="/trezor-multicoin/">Trezor supports altcoins ZCASH, DASH, ETH and LTC.</a>
+      </li>
+
+      <h3>Bitcoin News:</h3>
+        <ul>
+          <li><a href="https://www.reddit.com/r/bitcoinmarkets" target="_blank">/r/bitcoinmarkets</a></li>
+          <li><a href="https://www.reddit.com/r/cryptomarkets" target="_blank">/r/cryptomarkets</a></li>
+          <li><a href="http://www.altcointoday.com">AltcoinToday</a></li>
+          <li><a href="http://www.coindesk.com/category/technology/altcoins/">Coindesk</a></li>
+        </ul>
+      <li>
+        <h3>Trading Spreadsheets</h3>
+        <ul>
+          <li><a target="_blank" href="https://coinpub.org">Crypto Spreadsheets</a></li>
+
+        </ul>
+      </li>
+
+      <li>
+        <h3>Bitcoin Cold Storage:</h3>
+        <div>
+          <a class='' rel='nofollow' target='_blank' href='https://www.ledgerwallet.com/r/e274'>
+      <amp-img itemprop="image" src='https://via.placeholder.com/300' layout="responsive" width="300px" height="250px">
+      </a>
+        </div>
+      </li>
+
+      <li>
+        <div>
+
+          <amp-iframe
+            width=336 height=280
+            layout="responsive"
+            data-aa="147074"
+            sandbox="allow-scripts allow-same-origin allow-modals allow-popups allow-forms"
+            src="https://ad.a-ads.com/147074?size=336x280">
+            <amp-img layout="fill" src="/img/ad-placeholder.jpg" placeholder></amp-img>
+          </amp-iframe>
+
+        </div>
+      </li>
+
+
+    </ul>
+  </section>
+</div>
+
+    </div>
+  </div>
+
+<footer>
+  <div class="footer">
+    <div class="six columns">
+<a title="Privacy Policy Altcointrading.net" href="/about/">About</a> |
+  <a title="Trading disclaimer" href="/disclaimer/">Disclaimer</a> |
+  <a href='http://feeds.specificfeeds.com/altcointrading?subParam=followPub' target='_blank'>
+    Newsletter
+  </a> ||
+  <a href="/coupon-bitmex-iYQB44/">Coupon BitMEX</a> |
+  <a href="/coupon-bitfinex-5egV78YtlC/">Coupon BitFinex</a>
+  <br>
+  &#169; 2016-2021 | info@example.com
+</div>
+<amp-analytics type="googleanalytics">
+<script type="application/json">
+{
+  "vars": {
+    "account": "UA-XXXXXXXXX"
+  },
+  "triggers": {
+    "trackPageview": {
+      "on": "visible",
+      "request": "pageview"
+    },
+    "outboundLinks": {
+        "on": "click",
+        "selector": "a",
+        "request": "event",
+        "vars": {
+          "eventCategory": "outbound",
+          "eventAction": "click",
+          "eventValue": "${outboundLink}"
+        }
+      }
+  }
+}
+</script>
+</amp-analytics>
+
+  </div>
+</footer>
+</body>
+</html>

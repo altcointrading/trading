@@ -1,0 +1,36 @@
+<div class="six columns">
+<a title="Privacy Policy Altcointrading.net" href="/about/">About</a> |
+  <a title="Trading disclaimer" href="/disclaimer/">Disclaimer</a> |
+  <a href='http://feeds.specificfeeds.com/altcointrading?subParam=followPub' target='_blank'>
+    Newsletter
+  </a> ||
+  <a href="/coupon-bitmex-iYQB44/">Coupon BitMEX</a> |
+  <a href="/coupon-bitfinex-5egV78YtlC/">Coupon BitFinex</a>
+  <br>
+  &#169; 2016-{{ site.time | date:"%Y"}} | {{ site.email }}
+</div>
+<amp-analytics type="googleanalytics">
+<script type="application/json">
+{
+  "vars": {
+    "account": "{{ site.ga }}"
+  },
+  "triggers": {
+    "trackPageview": {
+      "on": "visible",
+      "request": "pageview"
+    },
+    "outboundLinks": {
+        "on": "click",
+        "selector": "a",
+        "request": "event",
+        "vars": {
+          "eventCategory": "outbound",
+          "eventAction": "click",
+          "eventValue": "${outboundLink}"
+        }
+      }
+  }
+}
+</script>
+</amp-analytics>
