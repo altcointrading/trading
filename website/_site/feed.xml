@@ -3,10 +3,10 @@
   <channel>
     <title>Altcoin Trading Theme</title>
     <description>Altcoin Trading is the forex of cryptocurrencies, with bitcoin as the base currency.</description>
-    <link>http://localhost:4000/</link>
-    <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 19 Dec 2021 13:42:55 +0000</pubDate>
-    <lastBuildDate>Sun, 19 Dec 2021 13:42:55 +0000</lastBuildDate>
+    <link>https://trading.tdou.dev/</link>
+    <atom:link href="https://trading.tdou.dev/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Sun, 19 Dec 2021 13:48:44 +0000</pubDate>
+    <lastBuildDate>Sun, 19 Dec 2021 13:48:44 +0000</lastBuildDate>
     <generator>Jekyll v4.2.1</generator>
     
       <item>
@@ -51,8 +51,8 @@ These Ideas can’t exist on the same chain, there isn’t some quantum solution
 &lt;/blockquote&gt;
 </description>
         <pubDate>Fri, 10 Mar 2017 00:00:00 +0000</pubDate>
-        <link>http://localhost:4000/ethereum-etf-unlikely/</link>
-        <guid isPermaLink="true">http://localhost:4000/ethereum-etf-unlikely/</guid>
+        <link>https://trading.tdou.dev/ethereum-etf-unlikely/</link>
+        <guid isPermaLink="true">https://trading.tdou.dev/ethereum-etf-unlikely/</guid>
         
         
         <category>coins</category>
@@ -169,8 +169,8 @@ These Ideas can’t exist on the same chain, there isn’t some quantum solution
 &lt;/ul&gt;
 </description>
         <pubDate>Wed, 08 Mar 2017 00:00:00 +0000</pubDate>
-        <link>http://localhost:4000/wyckoff-avoidance/</link>
-        <guid isPermaLink="true">http://localhost:4000/wyckoff-avoidance/</guid>
+        <link>https://trading.tdou.dev/wyckoff-avoidance/</link>
+        <guid isPermaLink="true">https://trading.tdou.dev/wyckoff-avoidance/</guid>
         
         
         <category>trading</category>
@@ -260,8 +260,8 @@ These Ideas can’t exist on the same chain, there isn’t some quantum solution
 &lt;p&gt;&lt;a href=&quot;/altcoin-wallets/&quot;&gt;Full post on altcoin wallets here&lt;/a&gt;.&lt;/p&gt;
 </description>
         <pubDate>Sat, 28 Jan 2017 00:00:00 +0000</pubDate>
-        <link>http://localhost:4000/how-to-buy-altcoins/</link>
-        <guid isPermaLink="true">http://localhost:4000/how-to-buy-altcoins/</guid>
+        <link>https://trading.tdou.dev/how-to-buy-altcoins/</link>
+        <guid isPermaLink="true">https://trading.tdou.dev/how-to-buy-altcoins/</guid>
         
         <category>popular</category>
         

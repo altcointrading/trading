@@ -11,9 +11,9 @@ BUNDLE_GEMFILE='./website/Gemfile' bundle exec jekyll b --source ./website/ --de
 echo " === [*] push"
 git add .
 git commit -m "GIT+DEPLOY - $1"
-git push origin master
+git push origin dev
 
 exit
 # !!!! configure this
 echo " === [*] publish"
-rsync -zavP ./website/_site/* YOURSERVERCODE:/var/www/PATH/
+rsync -zavP ./website/_site/* dev:/var/www/demo-trading/

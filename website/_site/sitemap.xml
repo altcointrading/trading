@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-        <loc>http://localhost:4000</loc>
+        <loc>https://trading.tdou.dev</loc>
     </url>
     
       
@@ -10,37 +10,37 @@
     
       
       <url>
-          <loc>http://localhost:4000/referral-coupons/</loc>
+          <loc>https://trading.tdou.dev/referral-coupons/</loc>
       </url>
       
     
       
       <url>
-          <loc>http://localhost:4000/category/arbitrage/</loc>
+          <loc>https://trading.tdou.dev/category/arbitrage/</loc>
       </url>
       
     
       
       <url>
-          <loc>http://localhost:4000/category/altcoins/</loc>
+          <loc>https://trading.tdou.dev/category/altcoins/</loc>
       </url>
       
     
       
       <url>
-          <loc>http://localhost:4000/category/exchanges/</loc>
+          <loc>https://trading.tdou.dev/category/exchanges/</loc>
       </url>
       
     
       
       <url>
-          <loc>http://localhost:4000/category/trading/</loc>
+          <loc>https://trading.tdou.dev/category/trading/</loc>
       </url>
       
     
       
       <url>
-          <loc>http://localhost:4000/category/wallets/</loc>
+          <loc>https://trading.tdou.dev/category/wallets/</loc>
       </url>
       
     
@@ -65,15 +65,15 @@
 
     
     <url>
-        <loc>http://localhost:4000/ethereum-etf-unlikely/</loc>
+        <loc>https://trading.tdou.dev/ethereum-etf-unlikely/</loc>
     </url>
     
     <url>
-        <loc>http://localhost:4000/wyckoff-avoidance/</loc>
+        <loc>https://trading.tdou.dev/wyckoff-avoidance/</loc>
     </url>
     
     <url>
-        <loc>http://localhost:4000/how-to-buy-altcoins/</loc>
+        <loc>https://trading.tdou.dev/how-to-buy-altcoins/</loc>
     </url>
     
 </urlset>
